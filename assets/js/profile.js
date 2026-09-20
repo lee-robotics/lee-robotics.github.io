@@ -275,10 +275,34 @@ function renderTalks(profile) {
   if (!host) return;
   const talks = sectionHidden(profile, 'talks') ? [] : visible(profile.talks);
   if (!talks.length) { host.hidden = true; return; }
-  host.appendChild(headWithMeta('Invited talks & lectures',
-    el('span', 'section-meta', `${talks.length} talk${talks.length === 1 ? '' : 's'}`)));
+
+  // Talks marked "selected": true are shown; the full list sits behind a toggle.
+  // With nothing marked, every talk is shown and there is no toggle.
+  const selected = talks.filter((t) => t.selected === true);
+  const collapsible = selected.length > 0 && selected.length < talks.length;
+  const heading = el('h2', '', collapsible ? 'Selected talks' : 'Invited talks & lectures');
+  const head = el('div', 'section-head');
+  head.appendChild(heading);
+  if (collapsible) {
+    const toggle = el('button', 'section-head-link section-toggle');
+    toggle.type = 'button';
+    const sync = (expanded) => {
+      toggle.setAttribute('aria-expanded', String(expanded));
+      toggle.textContent = expanded ? 'Show selected' : `Full list (${talks.length}) →`;
+      heading.textContent = expanded ? 'Invited talks & lectures' : 'Selected talks';
+      host.querySelectorAll('.talk-row-extra').forEach((row) => { row.hidden = !expanded; });
+    };
+    toggle.addEventListener('click', () => sync(toggle.getAttribute('aria-expanded') !== 'true'));
+    head.appendChild(toggle);
+    host.appendChild(head);
+    queueMicrotask(() => sync(false));
+  } else {
+    head.appendChild(el('span', 'section-meta', `${talks.length} talk${talks.length === 1 ? '' : 's'}`));
+    host.appendChild(head);
+  }
+
   talks.forEach((t) => {
-    const row = el('div', 'talk-row');
+    const row = el('div', collapsible && t.selected !== true ? 'talk-row talk-row-extra' : 'talk-row');
     row.appendChild(el('div', 'talk-date', t.date));
     const title = el('div', 'talk-title');
     title.appendChild(el('span', 'talk-title-text', t.title));

@@ -1,9 +1,9 @@
 {
   "name": "Joonho Lee",
   "photo": "media/team_pic/joonho.jpeg",
-  "role": "Group Leader, Neuromeka AI Lab · Advisor, RIVR",
+  "role": "Director, Neuromeka AI Lab",
   "status": "On military duty (until 2027.4.30., Technical Research Personnel)",
-  "bio": "Robotics researcher and systems integrator with field experience. PhD from the Robotic Systems Lab at ETH Zurich on legged robotics; now leading AI research for industrial robots at Neuromeka.",
+  "bio": "Robotics researcher and hands-on systems engineer, combining robot learning research with end-to-end development and real-world deployment. PhD from ETH Zurich’s Robotic Systems Lab, with a focus on legged robotics; now leading AI research for industrial robots at Neuromeka.",
   "links": [
     {
       "label": "joonho.lee@neuromeka.com",
@@ -23,13 +23,13 @@
   "mosaic": {
     "layout": "custom",
     "columns": 8,
-    "rowHeight": 80,
+    "rowHeight": 140,
     "tiles": [
       {
         "src": "media/thumbnails/solder_zoom.mp4",
         "poster": "media/thumbnails/solder_zoom_poster.jpg",
         "cols": 2,
-        "rows": 2,
+        "rows": 1,
         "caption": "Learned robot soldering, validated on a live factory floor",
         "sub": "Under review, Nature Communications",
         "href": "https://arxiv.org/abs/2604.22235"
@@ -38,7 +38,7 @@
         "src": "media/thumbnails/short_insert.mp4",
         "poster": "media/thumbnails/short_insert_poster.jpg",
         "cols": 2,
-        "rows": 2,
+        "rows": 1,
         "position": "42% 50%",
         "caption": "Proprioceptive reflex for contact-rich manipulation",
         "sub": "Submitted to ICRA 2027"
@@ -46,7 +46,7 @@
       {
         "src": "media/profile/powder-dispensing.jpg",
         "cols": 2,
-        "rows": 2,
+        "rows": 1,
         "position": "50% 45%",
         "caption": "Powder dispensing with a cobot",
         "sub": "Ongoing work"
@@ -55,7 +55,7 @@
         "src": "media/thumbnails/left_to_right.mp4",
         "poster": "media/thumbnails/left_to_right_poster.jpg",
         "cols": 2,
-        "rows": 2,
+        "rows": 1,
         "caption": "Fast collision avoidance for cobots",
         "sub": "IEEE RA-L 2025",
         "href": "https://arxiv.org/abs/2508.20457",
@@ -64,7 +64,7 @@
       {
         "src": "media/profile/scirobotics-cover-2020.jpg",
         "cols": 1,
-        "rows": 2,
+        "rows": 1,
         "position": "top",
         "caption": "Robust outdoor locomotion",
         "sub": "Science Robotics 2020 · cover",
@@ -73,7 +73,7 @@
       {
         "src": "media/profile/anymal-field-monkeys.jpg",
         "cols": 3,
-        "rows": 2,
+        "rows": 1,
         "caption": "When monkeys meet an ANYmal robot in the wild",
         "sub": "In South Africa, bioRxiv 2024",
         "href": "https://www.biorxiv.org/content/10.1101/2024.08.13.607714v1"
@@ -81,7 +81,7 @@
       {
         "src": "media/profile/anymal-on-wheels.webp",
         "cols": 2,
-        "rows": 2,
+        "rows": 1,
         "caption": "Autonomous navigation for wheeled-legged robots",
         "sub": "Science Robotics 2024",
         "href": "https://www.science.org/doi/10.1126/scirobotics.adi9641"
@@ -89,7 +89,7 @@
       {
         "src": "media/profile/anymal-forest-hike.jpg",
         "cols": 2,
-        "rows": 2,
+        "rows": 1,
         "caption": "Hiking with ANYmal",
         "sub": "Science Robotics 2022",
         "href": "https://leggedrobotics.github.io/rl-perceptiveloco/",
@@ -100,14 +100,14 @@
   "experience": [
     {
       "when": "2024 – now",
-      "org": "Neuromeka AI Group",
-      "role": "Group Leader"
+      "org": "Neuromeka Co., Ltd.",
+      "role": "Director, AI Group · Military service"
     },
-    {
-      "when": "2024 – now",
-      "org": "RIVR",
-      "role": "Advisor, RL-based control and navigation"
-    }
+  {
+    "when": "2022 – 2024",
+    "org": "RIVR",
+    "role": "Conceived and developed the initial RL-based control and navigation stack"
+  }
   ],
   "education": [
     {
@@ -324,96 +324,112 @@
   "talks": [
     {
       "date": "2026.09.22",
+      "selected": true,
       "title": "From Paper to Factory Floor: Building Smart Robots for Industry",
       "venue": "ME Seminar, KAIST",
       "country": "KR"
     },
     {
       "date": "2025.11.28",
+      "selected": true,
       "title": "Teaching Robots to Walk and Work",
       "venue": "CSE/GSAI Seminar, POSTECH",
       "country": "KR"
     },
     {
       "date": "2025.06.04",
+      "selected": true,
       "title": "Training Robots to Move and Work",
       "venue": "IRIM Seminar, Georgia Institute of Technology",
       "country": "US"
     },
     {
       "date": "2025.02.10",
+      "selected": true,
       "title": "Elevating Robotic Performance through Learned Autonomy",
       "venue": "ME Seminar, SNU",
       "country": "KR"
     },
     {
       "date": "2024.10.15",
+      "selected": false,
       "title": "Advancing the Autonomy of Legged Robots",
       "venue": "KAIST AI",
       "country": "KR"
     },
     {
       "date": "2024.01.02",
+      "selected": false,
       "title": "Learning locomotion and autonomous navigation for legged robots",
       "venue": "SUSTech",
       "country": "CN"
     },
     {
       "date": "2023.12.29",
+      "selected": false,
       "title": "Learning locomotion and autonomous navigation for legged robots",
       "venue": "Zhejiang University",
       "country": "CN"
     },
     {
       "date": "2023.08.02",
+      "selected": false,
       "title": "Navigating real-world with legged robots",
       "venue": "Georgia Institute of Technology",
       "country": "US"
     },
     {
       "date": "2022.11.10",
+      "selected": false,
       "title": "Robust quadrupedal locomotion via RL",
       "venue": "Krafton",
       "country": "KR"
     },
     {
       "date": "2022.11.08",
+      "selected": false,
       "title": "Toward the real-world applications of autonomous walking robots",
       "venue": "POSTECH",
       "country": "KR"
     },
     {
       "date": "2022.11.03",
+      "selected": false,
       "title": "Developing legged robots for outdoor use",
       "venue": "Agency for Defense Development (ADD)",
       "country": "KR"
     },
     {
       "date": "2022.04.25",
+      "selected": false,
       "title": "RL for quadrupedal locomotion",
       "venue": "DLR",
       "country": "DE"
     },
     {
       "date": "2022.01.12",
+      "selected": false,
       "title": "Learning quadrupedal locomotion over challenging terrain",
       "venue": "RILAB, Korea University",
       "country": "KR"
     },
     {
       "date": "2021.07.12",
+      "selected": false,
       "title": "Learning quadrupedal locomotion over challenging terrain",
       "venue": "CRL, ETH Zurich",
       "country": "CH"
     },
     {
       "date": "2021.07.02",
+      "selected": true,
       "title": "Learning quadrupedal locomotion over challenging terrain",
       "venue": "Telluride Neuromorphic Cognition Engineering Workshop",
       "country": "US"
     },
     {
       "date": "2021.05.21",
+      "selected": true,
       "title": "Learning quadrupedal locomotion over challenging terrain",
       "venue": "NCCR Robotics Seminar",
       "country": "CH",
@@ -421,6 +437,7 @@
     },
     {
       "date": "2021.02.26",
+      "selected": true,
       "title": "Learning quadrupedal locomotion over challenging terrain",
       "venue": "PAIR, University of Toronto",
       "country": "CA",
@@ -428,30 +445,35 @@
     },
     {
       "date": "2021.02.12",
+      "selected": true,
       "title": "인공지능기술을 활용한 4족보행로봇 제어",
       "venue": "AI Winter School, Korean Society of Mechanical Engineers (KSME)",
       "country": "KR"
     },
     {
       "date": "2020.11.10",
+      "selected": false,
       "title": "Learning quadrupedal locomotion over challenging terrain",
       "venue": "CSIRO",
       "country": "AU"
     },
     {
       "date": "2020.08.05",
+      "selected": false,
       "title": "Learning legged locomotion – walking through a forest",
       "venue": "Intel Labs",
       "country": "US"
     },
     {
       "date": "2019.02.13",
+      "selected": false,
       "title": "시뮬레이션에서의 심층강화학습을 이용한 보행로봇 제어",
       "venue": "Korea Institute of Industrial Technology",
       "country": "KR"
     },
     {
       "date": "2019.02.11",
+      "selected": false,
       "title": "시뮬레이션에서의 심층강화학습을 이용한 보행로봇 제어",
       "venue": "Agency for Defense Development (ADD)",
       "country": "KR"

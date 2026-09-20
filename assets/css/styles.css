@@ -225,6 +225,24 @@ h2 {
   white-space: nowrap;
 }
 
+/* A section-head link that is a button, e.g. "Full list" on the talks. */
+.section-toggle {
+  padding: 0;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.section-toggle:hover {
+  color: var(--color-accent-hover);
+}
+
+.talk-row[hidden] {
+  display: none;
+}
+
 .section-meta {
   font-size: 11px;
   letter-spacing: 0.08em;
