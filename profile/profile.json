@@ -157,6 +157,7 @@
       "venue": "Submitted to ICRA 2027",
       "award": "",
       "link": "https://arxiv.org/abs/2610.02811",
+      "project": "projects/reflex/",
       "hidden": false
     },
     {
@@ -166,6 +167,7 @@
       "venue": "arXiv:2604.22235 · under review at Nature Communications",
       "award": "",
       "link": "https://arxiv.org/abs/2604.22235",
+      "project": "projects/solder/",
       "hidden": false
     },
     {

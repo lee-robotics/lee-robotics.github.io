@@ -1,5 +1,5 @@
 ---
-Title: Learned Proprioceptive Reflex for Manipulation
+Title: Learning Reflexive Behavior for Contact-Rich Manipulation
 Date: 2026-10-02
 Author: Quan Nguyen, Yunho Kim, Joonho Lee
 ProjectUrl: projects/reflex/
