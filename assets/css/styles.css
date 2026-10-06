@@ -1524,7 +1524,9 @@ a.student-name {
   border-bottom-color: var(--color-accent-bright);
 }
 
-/* Title block: kicker, paper title, authors, affiliation, resource links. */
+/* Title block: kicker, paper title, authors, affiliation, resource links.
+   Every block on a project page fills the column, like the post pages;
+   only figures smaller than the column sit centred inside it. */
 .project-head {
   display: flex;
   flex-direction: column;
@@ -1534,7 +1536,6 @@ a.student-name {
 }
 
 .project-head h1 {
-  max-width: 840px;
   font-size: clamp(30px, 4.2vw, 42px);
   line-height: 1.06;
   letter-spacing: -0.015em;
@@ -1610,7 +1611,6 @@ a.student-name {
 }
 
 .prose {
-  max-width: 720px;
   font-size: 15px;
   line-height: 1.6;
 }
@@ -1646,13 +1646,8 @@ a.student-name {
   opacity: 0.95;
 }
 
-.project-figure-portrait {
-  max-width: 720px;
-}
-
 .project-figure figcaption,
 .project-caption {
-  max-width: 720px;
   margin: 0;
   font-size: 13px;
   line-height: 1.55;

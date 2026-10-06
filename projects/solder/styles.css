@@ -6,11 +6,6 @@ html {
   scroll-padding-top: 48px;
 }
 
-/* The validation figure is a tall portrait; keep it readable without scrolling. */
-.validation-figure {
-  max-width: 640px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

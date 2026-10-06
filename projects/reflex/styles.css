@@ -94,13 +94,13 @@ figcaption strong { color: var(--text); }
 .method-overview-summary { max-width: var(--reading-width); }
 /* Preserve readable SVG annotation sizes instead of shrinking them to the viewport. */
 .svg-scroll { max-width: 100%; overflow-x: auto; }
-.svg-scroll img { max-width: none; }
+.svg-scroll img { max-width: none; margin-inline: auto; }
 .svg-scroll > a { display: block; }
 .svg-scroll-hint { margin: 0 0 var(--space-2); font-size: var(--small-font-size); color: var(--muted); }
 .svg-scroll-hint[hidden] { display: none; }
-.training-overview { max-width: var(--training-figure-width); margin: 0 0 32px; }
-.training-overview figcaption { max-width: var(--reading-width); }
-.training-overview img { width: var(--training-figure-width); height: auto; }
+/* The method diagram fills the column; on phones it keeps its calibrated width and scrolls. */
+.training-overview { margin: 0 0 32px; }
+.training-overview img { width: max(var(--training-figure-width), 100%); height: auto; }
 .result-video-placeholder {
   max-width: var(--reading-width);
   aspect-ratio: 16 / 9;
@@ -235,7 +235,7 @@ figcaption strong { color: var(--text); }
 .question-summary { max-width: var(--reading-width); margin: 0 0 24px; padding-top: 20px; border-top: 1px solid var(--line); }
 .question-summary h4 { margin: 0 0 14px; text-align: left; }
 .question-summary p { margin-top: 0; }
-.box-force-plot { max-width: var(--box-force-figure-width); margin: 0 0 var(--space-8); }
+.box-force-plot { margin: 0 0 var(--space-8); }
 .box-force-plot img { width: var(--box-force-figure-width); }
 .box-video-comparison { padding: 20px; border: 1px solid var(--line); border-radius: calc(var(--radius) * 2); margin-bottom: var(--space-8); }
 .box-video-instructions, .box-video-status { font-size: var(--small-font-size); line-height: 1.6; color: var(--muted); text-align: left; }
@@ -254,7 +254,7 @@ figcaption strong { color: var(--text); }
   .box-video-comparison { padding: var(--space-4); }
   .box-video-panel { grid-template-columns: 1fr; }
 }
-.surface-plot-card { max-width: calc(var(--surface-terrain-figure-width) + 42px); padding: 20px; border: 1px solid var(--line); margin: var(--space-6) 0 var(--space-8); }
+.surface-plot-card { padding: 20px; border: 1px solid var(--line); margin: var(--space-6) 0 var(--space-8); }
 .surface-plot-controls { margin-top: var(--space-4); }
 .surface-terrain-tabs button { border-radius: calc(var(--radius) * 2); }
 .surface-plot-panel { margin-top: var(--space-4); }
@@ -279,16 +279,14 @@ thead th { font-size: var(--small-font-size); font-weight: 600; vertical-align: 
 tr > :first-child { text-align: left; }
 tbody th { font-weight: 400; }
 tbody tr + tr { border-top: 1px solid var(--line); }
-.insertion-success-card { width: fit-content; max-width: 100%; margin: var(--space-6) 0 var(--space-8); padding: 20px; border: 1px solid var(--line); border-radius: calc(var(--radius) * 2); }
-/* Let the table determine card width; wrap its explanation to that width. */
-.insertion-success-card > .success-rate-description { contain: inline-size; }
+.insertion-success-card { margin: var(--space-6) 0 var(--space-8); padding: 20px; border: 1px solid var(--line); border-radius: calc(var(--radius) * 2); }
 .success-rate-description, .surface-plot-description, .peg-deployment-card > h5 { margin-top: 0; font-size: var(--small-font-size); line-height: 1.6; color: var(--muted); text-align: left; }
 .insertion-success-controls { margin-top: var(--space-4); }
 .success-clearance-label { margin-bottom: var(--space-2); font-size: var(--label-font-size); color: var(--text); }
 .success-clearance-tabs button { border-radius: calc(var(--radius) * 2); }
 .insertion-success-panel { margin-top: var(--space-4); overflow-x: auto; }
 .insertion-success-panel[hidden] { display: none; }
-.success-rate-table { width: max-content; min-width: 0; table-layout: auto; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.success-rate-table { width: 100%; min-width: 0; table-layout: auto; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .success-rate-table thead { border-bottom-color: var(--line); }
 .success-rate-table thead th[scope="colgroup"] { text-align: center; font-size: var(--label-font-size); border-bottom: 1px solid var(--line); }
 .success-rate-table thead th[rowspan] { vertical-align: middle; }

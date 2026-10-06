@@ -6,7 +6,7 @@
   --font-family: var(--font-body);
   --body-font-size: 15px;
   --line-height: 1.6;
-  --reading-width: 720px;
+  --reading-width: none;       /* prose fills the column, like the rest of the site */
   --page-width: var(--content-width);
 
   /* Calibrated SVG widths: regular diagram text / plot axis labels match body text.

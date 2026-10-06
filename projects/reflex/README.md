@@ -16,20 +16,20 @@ The main settings are at the top of this file:
 --font-family: var(--font-body);  /* Inter, from the site stylesheet */
 --body-font-size: 15px;
 --line-height: 1.6;
---reading-width: 720px;
+--reading-width: none;  /* prose fills the column; set e.g. 720px to narrow it */
 ```
 
 Other settings control heading/caption sizes, paragraph gaps, section padding, colors, and the wider media layout. Change the values, save, and refresh the browser. **No rebuild needed for CSS.** Use Ctrl+Shift+R if the browser caches the previous styles.
 
 Examples:
 
-- Wider prose: `--reading-width: 46rem;` (736px).
+- Narrower prose: `--reading-width: 720px;`.
 - Larger body text and TL;DR: `--body-font-size: 18px;`.
 - Serif typography: `--font-family: Georgia, 'Times New Roman', serif;`.
 - Less vertical space: `--line-height: 1.4;`.
 - Left alignment: `--text-align: left;`.
 
-Reading width and font size are deliberately independent. `rem` is based on the root size (normally 16px), not `--body-font-size`. Keep reading width smaller than the media layout width. Narrow screens automatically constrain both to the viewport. Headings scale down on smaller screens; body text uses your chosen size on desktop and mobile.
+Reading width and font size are independent: by default prose fills the 960px column like the rest of the site, and a pixel value narrows it. Narrow screens automatically constrain both to the viewport. Headings scale down on smaller screens; body text uses your chosen size on desktop and mobile.
 
 ### 2. Text: `content/*.md`
 
