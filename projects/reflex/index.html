@@ -16,9 +16,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Barlow+Condensed:wght@600&display=swap" />
-  <link rel="stylesheet" href="../../assets/css/styles.css" />
-  <link rel="stylesheet" href="theme.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <!-- The ?v= query makes browsers refetch the stylesheets after an edit; bump it when they change. -->
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=20261006b" />
+  <link rel="stylesheet" href="theme.css?v=20261006b" />
+  <link rel="stylesheet" href="styles.css?v=20261006b" />
   <script id="primitive-content" type="application/json">{"spring": {"tag": "ANCHORED MOTION", "title": "Spring constraint", "description": "The spring pulls the end-effector back toward a sampled anchor position. Displacement and velocity determine the restoring force.", "constraint": "Displacement from a point", "example": "Like moving against an elastic tether.", "formula": "F = k(xₐ − x) − bẋ", "accessible": "Spring: displacement from an anchor creates a restoring force."}, "plane": {"tag": "SURFACE CONTACT", "title": "Plane constraint", "description": "The plane pushes back only when the end-effector penetrates it. Force acts along the surface normal, leaving motion across the surface free.", "constraint": "One direction, on contact", "example": "Like wiping or following a surface.", "formula": "f = −kd − bvₙ, when d \u003c 0", "accessible": "Plane: a surface resists penetration in its normal direction, while tangential motion is free."}, "rail": {"tag": "GUIDED MOTION", "title": "Rail constraint", "description": "The rail pulls the end-effector toward a fixed line. It constrains two translational directions while leaving motion along the rail free.", "constraint": "Two directions, perpendicular to a line", "example": "Like a peg guided inside a bore.", "formula": "f = kd + bv, toward the rail", "accessible": "Rail: restoring force points toward a line, while motion along that line remains free."}}</script>
   <script src="script.js" defer></script>
   <script src="assets/vendor/three.min.js" defer></script>
