@@ -1469,3 +1469,280 @@ a.student-name {
     transition: none;
   }
 }
+
+/* ── Project pages (projects/<name>/index.html) ───────────────────────────── */
+/* Standalone paper pages in sub-folders. They load this stylesheet from ../../
+   for the tokens and the shell; the head, in-page section nav and figure
+   furniture below are shared, each page adds its own component rules. */
+
+.wrap-project {
+  gap: 32px;
+  padding-top: 24px;
+}
+
+/* Sticky row of section links under the site header. */
+.project-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: color-mix(in srgb, var(--color-bg) 96%, transparent);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.project-nav-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.project-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.project-nav a {
+  flex: none;
+  padding: 11px 0 9px;
+  border-bottom: 2px solid transparent;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.project-nav a:hover {
+  color: var(--color-accent-hover);
+}
+
+.project-nav a[aria-current] {
+  color: var(--color-accent-bright);
+  border-bottom-color: var(--color-accent-bright);
+}
+
+/* Title block: kicker, paper title, authors, affiliation, resource links. */
+.project-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 20px;
+}
+
+.project-head h1 {
+  max-width: 840px;
+  font-size: clamp(30px, 4.2vw, 42px);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+.project-authors {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 18px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-authors sup {
+  font-size: 0.7em;
+  line-height: 0;
+  color: var(--color-accent);
+}
+
+.project-affiliation {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.project-affiliation a {
+  color: inherit;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-line);
+  font-size: 13px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.project-link:hover {
+  background: var(--color-hover-row);
+  border-color: var(--color-accent-bright);
+  color: var(--color-accent-bright);
+}
+
+.project-link-note {
+  font-size: 12px;
+  color: var(--color-meta);
+}
+
+/* Sections: the site's section head (title left, link right, hairline). */
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  scroll-margin-top: 48px;
+}
+
+.project-section .section-head h2 {
+  font-size: 24px;
+}
+
+.prose {
+  max-width: 720px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.prose p {
+  margin: 0 0 12px;
+  text-wrap: pretty;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.project-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-figure img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-line);
+}
+
+.project-figure-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.project-figure-link:hover {
+  opacity: 0.95;
+}
+
+.project-figure-portrait {
+  max-width: 720px;
+}
+
+.project-figure figcaption,
+.project-caption {
+  max-width: 720px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--color-secondary);
+}
+
+.project-figure figcaption strong,
+.project-caption strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--color-line);
+  background: var(--color-hover-row);
+}
+
+.video iframe,
+.video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Collapsed extras ("More details", "Abstract"). */
+.project-details {
+  border: 1px solid var(--color-line);
+}
+
+.project-details summary {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 11px 14px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-details summary::before {
+  content: '+';
+  font-family: var(--font-head);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.project-details[open] summary::before {
+  content: '–';
+}
+
+.project-details summary span {
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.project-details[open] summary {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.project-details-body {
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-details-body h3 {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+  .wrap-project {
+    gap: 26px;
+  }
+
+  .project-head h1 {
+    font-size: 28px;
+  }
+
+  .project-nav-inner {
+    gap: 16px;
+  }
+}

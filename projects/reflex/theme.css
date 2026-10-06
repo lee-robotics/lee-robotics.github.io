@@ -1,0 +1,49 @@
+/* Design tokens for this page. Colours, fonts and the 960px column come from
+   the site stylesheet (../../assets/css/styles.css, loaded first), so the page
+   matches the rest of lee-robotics.github.io; this file maps them onto the
+   names styles.css uses. Save and refresh; no rebuild needed for CSS. */
+:root {
+  --font-family: var(--font-body);
+  --body-font-size: 15px;
+  --line-height: 1.6;
+  --reading-width: 720px;
+  --page-width: var(--content-width);
+
+  /* Calibrated SVG widths: regular diagram text / plot axis labels match body text.
+     Coefficients are viewBox width divided by the SVG's transformed label size. */
+  --training-figure-width: calc(var(--body-font-size) * 49.186715);
+  --box-force-figure-width: calc(var(--body-font-size) * 17.272568);
+  /* Both terrain SVGs use the same canvas and label scale. */
+  --surface-terrain-figure-width: calc(var(--body-font-size) * 36.000002);
+  --surface-gain-figure-width: calc(var(--body-font-size) * 36);
+
+  --title-font-size: 40px;
+  --section-font-size: 24px;
+  --subheading-font-size: 20px;
+  --subsubheading-font-size: 16px;
+  --evidence-heading-font-size: 15px;
+  --label-font-size: 13px;
+  --caption-font-size: 13px;
+  --small-font-size: 13px;
+  --text-align: left;
+
+  --paragraph-gap: 12px;
+  --section-padding: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius: 0px;
+  --control-height: 36px;
+  --text: var(--color-text);
+  --muted: var(--color-muted);
+  --link: var(--color-accent);
+  --link-hover: var(--color-accent-hover);
+  --line: var(--color-line);
+  --control-border: var(--color-line);
+  --table-rule: color-mix(in srgb, var(--color-text) 40%, transparent);
+  --soft: #f6f8fa;
+  --accent-soft: var(--color-hover-row);
+}

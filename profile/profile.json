@@ -32,7 +32,7 @@
         "rows": 1,
         "caption": "Learned robot soldering, validated on a live factory floor",
         "sub": "Under review, Nature Communications",
-        "href": "https://arxiv.org/abs/2604.22235"
+        "href": "projects/solder/"
       },
       {
         "src": "media/thumbnails/short_insert.mp4",
@@ -41,7 +41,8 @@
         "rows": 1,
         "position": "42% 50%",
         "caption": "Proprioceptive reflex for contact-rich manipulation",
-        "sub": "Submitted to ICRA 2027"
+        "sub": "Submitted to ICRA 2027",
+        "href": "projects/reflex/"
       },
       {
         "src": "media/profile/powder-dispensing.jpg",
@@ -79,7 +80,8 @@
         "href": "https://www.biorxiv.org/content/10.1101/2024.08.13.607714v1"
       },
       {
-        "src": "media/profile/anymal-on-wheels.webp",
+        "src": "media/profile/anymal-on-wheels.mp4",
+        "poster": "media/profile/anymal-on-wheels_poster.jpg",
         "cols": 2,
         "rows": 1,
         "caption": "Autonomous navigation for wheeled-legged robots",
@@ -149,12 +151,12 @@
   ],
   "publications": [
     {
-      "year": "—",
+      "year": 2026,
       "title": "Proprioceptive reflex learning for contact-rich manipulation",
       "authors": "Quan Nguyen, Yunho Kim, Joonho Lee",
       "venue": "Submitted to ICRA 2027",
       "award": "",
-      "link": "",
+      "link": "https://arxiv.org/abs/2610.02811",
       "hidden": false
     },
     {
@@ -163,7 +165,7 @@
       "authors": "Yunho Kim, Quan Nguyen, Taewhan Kim, Youngjin Heo, Joonho Lee",
       "venue": "arXiv:2604.22235 · under review at Nature Communications",
       "award": "",
-      "link": "",
+      "link": "https://arxiv.org/abs/2604.22235",
       "hidden": false
     },
     {

@@ -114,7 +114,8 @@ const postCount = document.getElementById('postCount');
 
 function buildPostRow(post) {
   const row = el('a', 'post-row');
-  row.href = postUrl(post.link);
+  // A post with a standalone project page (ProjectUrl: projects/<name>/) links there.
+  row.href = post.projectUrl || postUrl(post.link);
 
   const thumbnail = createThumbnail(post);
   if (thumbnail) {

@@ -1,0 +1,26 @@
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local environment files (keep example configurations)
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Temporary build output and logs
+/.index.html.tmp
+*.log
+
+# Editor swap and backup files
+*.swp
+*.swo
+*~
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+
+# Keep index.html and assets/ versioned for static deployment.

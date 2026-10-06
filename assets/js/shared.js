@@ -96,6 +96,7 @@ function buildPostData(meta = {}, link = '', fallbackThumbnail = '') {
     publication: meta.publication || '',
     publicationLink: meta.publicationlink || '',
     doi: meta.doi || '',
+    projectUrl: meta.projecturl || '',
     thumbnail: image || poster || fallbackThumbnail,
     thumbnailPoster: poster,
     link,

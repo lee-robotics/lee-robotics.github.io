@@ -1,0 +1,18 @@
+/* Soldering project page. Tokens, shell and the shared project-page furniture
+   come from ../../assets/css/styles.css; only page-specific rules live here. */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 48px;
+}
+
+/* The validation figure is a tall portrait; keep it readable without scrolling. */
+.validation-figure {
+  max-width: 640px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

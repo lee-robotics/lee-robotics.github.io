@@ -16,6 +16,11 @@ function buildPaper(post) {
   }
 
   const links = el('div', 'paper-links');
+  if (post.projectUrl) {
+    const project = el('a', '', 'Project page →');
+    project.href = post.projectUrl;
+    links.appendChild(project);
+  }
   if (post.publicationLink) appendInlineMarkdown(links, post.publicationLink);
   if (post.doi) links.appendChild(el('span', '', `DOI: ${post.doi}`));
   if (links.childNodes.length) paper.appendChild(links);
@@ -37,7 +42,7 @@ function renderPost(post) {
   if (post.description) head.appendChild(el('p', 'post-head-desc', post.description));
   postContainer.appendChild(head);
 
-  if (post.publication || post.publicationLink || post.doi) {
+  if (post.publication || post.publicationLink || post.doi || post.projectUrl) {
     postContainer.appendChild(buildPaper(post));
   }
 

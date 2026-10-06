@@ -1,0 +1,37 @@
+<section id="training" data-nav="{{plain:training.heading}}" class="content-section" aria-labelledby="training-title">
+  <div class="section-head"><h2 id="training-title">{{training.heading}}</h2></div>
+  <figure class="training-overview" aria-labelledby="training-overview-caption">
+    <p class="svg-scroll-hint" id="training-overview-scroll-hint" hidden>Scroll horizontally to see the full figure.</p>
+    <div class="svg-scroll" role="region" aria-label="Method overview diagram; scroll horizontally on narrow screens" tabindex="0" data-scroll-hint="training-overview-scroll-hint">
+      <a href="assets/training-overview.svg"><img src="assets/training-overview.svg" width="836" height="703" loading="lazy" alt="{{plain:training.overview-alt}}"></a>
+    </div>
+    <figcaption id="training-overview-caption">{{training.overview-caption}}</figcaption>
+  </figure>
+  <p id="method-overview" class="method-overview-summary">{{training.overview-summary}}</p>
+  <figure class="primitive-figure" aria-labelledby="primitives-caption">
+    <figcaption id="primitives-caption">{{primitives.caption}}</figcaption>
+    <div id="primitives" class="primitive-explorer">
+      <fieldset class="primitive-selector">
+        <legend class="sr-only">Interaction primitive</legend>
+        <label><input class="sr-only" type="radio" name="primitive" value="spring" checked><span>Spring</span></label>
+        <label><input class="sr-only" type="radio" name="primitive" value="plane"><span>Plane</span></label>
+        <label><input class="sr-only" type="radio" name="primitive" value="rail"><span>Rail</span></label>
+      </fieldset>
+      <div id="primitive-panel">
+        <div class="primitive-visual">
+          <div id="primitive-viewer" role="img" aria-label="Interactive 3D force field" aria-describedby="primitive-instructions"></div>
+        </div>
+        <div class="primitive-copy">
+          <fieldset class="probe-controls"><legend>End-effector position (m)</legend>
+            <label>X <input id="probe-x" type="range" min="-1.5" max="1.5" step="0.01" value="0.8"><output for="probe-x" id="value-x">0.80</output></label>
+            <label>Y <input id="probe-y" type="range" min="-1.5" max="1.5" step="0.01" value="0.7"><output for="probe-y" id="value-y">0.70</output></label>
+            <label>Z <input id="probe-z" type="range" min="-1.5" max="1.5" step="0.01" value="0.4"><output for="probe-z" id="value-z">0.40</output></label>
+          </fieldset>
+          <button id="reset-probe" type="button" aria-label="Reset end-effector position and view" title="Reset position and view">Reset</button>
+          <p id="primitive-instructions" class="primitive-instructions">{{primitives.instructions}}</p>
+          <p id="primitive-error" role="status" hidden></p>
+        </div>
+      </div>
+    </div>
+  </figure>
+</section>

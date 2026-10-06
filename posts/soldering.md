@@ -1,6 +1,7 @@
 ---
 Title: AI-powered Robot Soldering in Factory
 Date: 2026-02-09
+ProjectUrl: projects/solder/
 Author: Neuromeka AI Group
 Image: media/thumbnails/solder_zoom.mp4
 ThumbnailPoster: media/thumbnails/solder_zoom_poster.jpg
