@@ -1657,6 +1657,21 @@ a.student-name {
   padding: 10px;
 }
 
+/* A video with a figure beside it; the figure drops below on phones. */
+.project-split {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.project-split-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
 .project-figure figcaption,
 .project-caption {
   margin: 0;
@@ -1750,5 +1765,9 @@ a.student-name {
 
   .project-nav-inner {
     gap: 16px;
+  }
+
+  .project-split {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
