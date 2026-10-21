@@ -6,7 +6,7 @@ Author: Neuromeka AI Group
 Image: media/thumbnails/solder_zoom.mp4
 ThumbnailPoster: media/thumbnails/solder_zoom_poster.jpg
 Description: A bimanual cobot runs continuously on a motor production line, demonstrating robust vision-based control in real-world industrial setup.
-Publication:  Kim et al., Learning-augmented robotic automation for real-world manufacturing, Nature Communications (accepted, 2026)
+Publication:  Kim et al., Learning-augmented robotic automation for real-world manufacturing, arXiv (2026) · under review at Nature Communications
 Publication Link: [arXiv](https://arxiv.org/abs/2604.22235)
 
 ---
