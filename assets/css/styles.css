@@ -1598,6 +1598,18 @@ a.student-name {
   color: var(--color-meta);
 }
 
+/* Publication status beside the links, in the accent so it stands out. */
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border: 1px solid var(--color-accent);
+  background: var(--color-badge-bg);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
 /* Sections: the site's section head (title left, link right, hairline). */
 .project-section {
   display: flex;
