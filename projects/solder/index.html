@@ -46,8 +46,7 @@
       <a href="#summary">Summary</a>
       <a href="#framework">System</a>
       <a href="#deployment">Deployment</a>
-      <a href="#baselines">Baselines</a>
-      <a href="#adaptation">Adaptation</a>
+      <a href="#controllers">Controllers</a>
       <a href="#safety">Safety</a>
     </div>
   </nav>
@@ -130,24 +129,24 @@
       </div>
     </section>
 
-    <section id="baselines" class="project-section" aria-labelledby="baselines-title">
-      <div class="section-head"><h2 id="baselines-title">Comparison with baselines</h2></div>
-      <figure class="project-figure project-figure-narrow">
-        <a class="project-figure-link" href="assets/lara_figure_5.pdf" target="_blank" rel="noopener" aria-label="Open the baseline comparison figure as a PDF"><img src="assets/lara_figure_5.webp" width="1519" height="1356" loading="lazy" alt="Bar charts comparing Ours, Naive IL, VLA, Conventional (Depth) and Conventional (RGB): (a) success rate per sub-task, (b) grasping pose, (c) number of recovery attempts." /></a>
-        <figcaption><strong>Comparison with task-controller variants.</strong> <strong>(a)</strong> Sub-task success rates for motor-core functional grasping, cable insertion and soldering (tool-tip alignment), 150 trials per sub-task. <strong>(b)</strong> Grasping outcomes, separating any successful grasp (arbitrary pose) from grasps within ±15° of the target pose. <strong>(c)</strong> Average number of recovery attempts during cable insertion.</figcaption>
-      </figure>
-      <p class="project-caption">The learned task controllers are compared with two learning-based variants and two conventional pipelines. <strong>Naive IL</strong> keeps the same imitation-learning framework but drops the structured image-processing pipeline and learns directly from full-resolution stereo RGB. <strong>VLA</strong> is a fine-tuned vision-language-action model (π<sub>0.5</sub>) with far more capacity and large-scale pretraining. The <strong>conventional</strong> baselines estimate poses with image segmentation and depth or RGB sensing and generate waypoints by rule; each applies only to some sub-tasks. Our controllers succeed in <strong>over 99%</strong> of trials on all three sub-tasks. The generic learning-based variants grasp the motor core almost as often, but seldom in the correct pose, and they need several recovery attempts per cable insertion where ours needs almost none. On this data budget, structured observations and task-specific inductive biases, rather than model capacity, are what make a learned controller reliable.</p>
-    </section>
-
-    <section id="adaptation" class="project-section" aria-labelledby="adaptation-title">
+    <section id="controllers" class="project-section" aria-labelledby="controllers-title">
       <div class="section-head">
-        <h2 id="adaptation-title">Adaptive behavior of neural controllers</h2>
+        <h2 id="controllers-title">Neural task controllers: adaptation and comparison with baselines</h2>
         <a class="section-head-link" href="https://youtu.be/iuldg_uB5jU" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
       </div>
-      <div class="video">
-        <iframe src="https://www.youtube-nocookie.com/embed/iuldg_uB5jU" title="Neural controllers adapting to variation in motor pose, hole position, and cable bending" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div class="project-split">
+        <div class="project-split-main">
+          <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/iuldg_uB5jU" title="Neural controllers adapting to variation in motor pose, hole position, and cable bending" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <p class="project-caption">Neural controllers <strong>handled inevitable variability</strong> during the production process. They adjusted motion to handle randomness in motor pose, hole position, and cable bending.</p>
+          <p class="project-caption">The learned task controllers are compared with two learning-based variants and two conventional pipelines. <strong>Naive IL</strong> keeps the same imitation-learning framework but drops the structured image-processing pipeline and learns directly from full-resolution stereo RGB. <strong>VLA</strong> is a fine-tuned vision-language-action model (π<sub>0.5</sub>) with far more capacity and large-scale pretraining. The <strong>conventional</strong> baselines estimate poses with image segmentation and depth or RGB sensing and generate waypoints by rule; each applies only to some sub-tasks. Our controllers succeed in <strong>over 99%</strong> of trials on all three sub-tasks. The generic learning-based variants grasp the motor core almost as often, but seldom in the correct pose, and they need several recovery attempts per cable insertion where ours needs almost none. On this data budget, structured observations and task-specific inductive biases, rather than model capacity, are what make a learned controller reliable.</p>
+        </div>
+        <figure class="project-figure project-figure-narrow">
+          <a class="project-figure-link" href="assets/lara_figure_5.pdf" target="_blank" rel="noopener" aria-label="Open the baseline comparison figure as a PDF"><img src="assets/lara_figure_5.webp" width="1519" height="1356" loading="lazy" alt="Bar charts comparing Ours, Naive IL, VLA, Conventional (Depth) and Conventional (RGB): (a) success rate per sub-task, (b) grasping pose, (c) number of recovery attempts." /></a>
+          <figcaption><strong>Comparison with task-controller variants.</strong> <strong>(a)</strong> Sub-task success rates for motor-core functional grasping, cable insertion and soldering (tool-tip alignment), 150 trials per sub-task. <strong>(b)</strong> Grasping outcomes, separating any successful grasp (arbitrary pose) from grasps within ±15° of the target pose. <strong>(c)</strong> Average number of recovery attempts during cable insertion.</figcaption>
+        </figure>
       </div>
-      <p class="project-caption">Neural controllers <strong>handled inevitable variability</strong> during the production process. They adjusted motion to handle randomness in motor pose, hole position, and cable bending.</p>
     </section>
 
     <section id="safety" class="project-section" aria-labelledby="safety-title">
