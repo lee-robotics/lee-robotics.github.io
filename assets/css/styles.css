@@ -1646,6 +1646,17 @@ a.student-name {
   opacity: 0.95;
 }
 
+/* Plots whose labels would be oversized at full width sit centred, like the
+   calibrated plots on the reflex page. */
+.project-figure-narrow {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.project-figure-narrow img {
+  padding: 10px;
+}
+
 .project-figure figcaption,
 .project-caption {
   margin: 0;

@@ -26,15 +26,16 @@
     ],
     "publisher": { "@type": "Organization", "name": "Neuromeka", "url": "https://www.neuromeka.com/" },
     "url": "https://lee-robotics.github.io/projects/solder/",
-    "sameAs": "https://arxiv.org/abs/2604.22235"
+    "sameAs": "https://arxiv.org/abs/2604.22235",
+    "isPartOf": { "@type": "Periodical", "name": "Nature Communications" }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Barlow+Condensed:wght@600&display=swap" />
   <!-- The ?v= query makes browsers refetch the stylesheets after an edit; bump it when they change. -->
-  <link rel="stylesheet" href="../../assets/css/styles.css?v=20261006b" />
-  <link rel="stylesheet" href="styles.css?v=20261006b" />
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=20261021" />
+  <link rel="stylesheet" href="styles.css?v=20261021" />
 </head>
 <body>
   <div id="siteHeader"></div>
@@ -46,6 +47,7 @@
       <a href="#framework">System</a>
       <a href="#deployment">Deployment</a>
       <a href="#validation">Validation</a>
+      <a href="#baselines">Baselines</a>
       <a href="#adaptation">Adaptation</a>
       <a href="#safety">Safety</a>
     </div>
@@ -55,14 +57,14 @@
     <a class="post-back" href="../../index.html#research">← Research</a>
 
     <header class="project-head" id="top">
-      <p class="kicker">Neuromeka AI Lab · Preprint 2026</p>
+      <p class="kicker">Neuromeka AI Lab · Accepted at Nature Communications</p>
       <h1>Learning-augmented robotic automation for real-world manufacturing</h1>
       <p class="project-authors"><span>Yunho Kim<sup>*</sup></span><span>Van Quan Nguyen</span><span>Taewhan Kim</span><span>Young Jin Heo</span><span>Joonho Lee<sup>*</sup></span></p>
       <p class="project-affiliation">Neuromeka Co., Ltd., Seoul, Republic of Korea · <sup>*</sup> Corresponding authors: <a href="mailto:yunho.kim@neuromeka.com">yunho.kim@neuromeka.com</a>, <a href="mailto:joonho.lee@neuromeka.com">joonho.lee@neuromeka.com</a></p>
       <div class="project-links" aria-label="Paper links">
         <a class="project-link" href="https://arxiv.org/abs/2604.22235" target="_blank" rel="noopener noreferrer">arXiv ↗</a>
         <a class="project-link" href="https://youtu.be/8Uu_UGyLyKY" target="_blank" rel="noopener noreferrer">Summary video ↗</a>
-        <span class="project-link-note">Main publication: not yet available</span>
+        <span class="project-link-note">Accepted for publication in Nature Communications (2026)</span>
       </div>
     </header>
 
@@ -89,13 +91,17 @@
 
     <section id="framework" class="project-section" aria-labelledby="framework-title">
       <div class="section-head"><h2 id="framework-title">Learning-augmented robotic automation</h2></div>
-      <figure class="project-figure">
-        <a class="project-figure-link" href="assets/framework.webp" target="_blank" rel="noopener" aria-label="Open the system framework figure at full resolution"><img src="assets/framework.webp" width="1800" height="703" loading="lazy" alt="Hybrid system framework integrating a conventional task scheduler and pretaught motions with neural task controllers and a neural 3D safety monitor." /></a>
-        <figcaption>A <strong>factory-validated hybrid system</strong> that integrates reliable conventional automation with learning-based control in a safety-aware architecture. Instead of relying on a single end-to-end policy, our approach retains the core industrial backbone, an explicit task scheduler and pretaught motions for structured parts of the workflow, while <strong>introducing learning only where adaptability is required</strong>.</figcaption>
-      </figure>
+      <div class="prose">
+        <p>A <strong>factory-validated hybrid system</strong> that integrates reliable conventional automation with learning-based control in a safety-aware architecture. Instead of relying on a single end-to-end policy, our approach retains the core industrial backbone, an explicit task scheduler and pretaught motions for structured parts of the workflow, while <strong>introducing learning only where adaptability is required</strong>.</p>
+      </div>
       <details class="project-details">
-        <summary>More details <span>Learning-based components</span></summary>
+        <summary>More details <span>System framework and learning-based components</span></summary>
         <div class="project-details-body">
+          <h3>System framework</h3>
+          <figure class="project-figure">
+            <a class="project-figure-link" href="assets/framework.webp" target="_blank" rel="noopener" aria-label="Open the system framework figure at full resolution"><img src="assets/framework.webp" width="1800" height="703" loading="lazy" alt="Hybrid system framework integrating a conventional task scheduler and pretaught motions with neural task controllers and a neural 3D safety monitor." /></a>
+            <figcaption>An explicit task scheduler sequences pretaught motions for the structured steps; neural task controllers take over cable insertion and soldering, and a neural 3D safety monitor watches the shared workspace.</figcaption>
+          </figure>
           <h3>Overview of the learning-based components</h3>
           <figure class="project-figure">
             <a class="project-figure-link" href="assets/method.webp" target="_blank" rel="noopener" aria-label="Open the learning-based components figure at full resolution"><img src="assets/method.webp" width="1500" height="1707" loading="lazy" alt="Three learning-based modules: (a) visual servoing controller, (b) imitation learning controller, and (c) neural 3D safety monitor." /></a>
@@ -122,6 +128,15 @@
         <a class="project-figure-link" href="assets/production_validation.webp" target="_blank" rel="noopener" aria-label="Open the production validation figure at full resolution"><img src="assets/production_validation.webp" width="1500" height="2098" loading="lazy" alt="Production validation figure comparing robot and human cycle times, quality-control tests, projected throughput, and solder-joint appearance." /></a>
         <figcaption>Across the run, the robot executed 324 cable insertion-and-solder operations. Two operations failed due to premature insertion termination, yielding a success rate of <strong>99.4%</strong> per operation. Processed motors passed the downstream <strong>QC tests</strong> used in routine production: tensile and electrical tests. The system achieved <strong>near-human takt time</strong> with <strong>reduced cycle-time variability</strong> while consistently producing <strong>high-quality solder joints</strong> comparable to those of experienced operators.</figcaption>
       </figure>
+    </section>
+
+    <section id="baselines" class="project-section" aria-labelledby="baselines-title">
+      <div class="section-head"><h2 id="baselines-title">Comparison with baselines</h2></div>
+      <figure class="project-figure project-figure-narrow">
+        <a class="project-figure-link" href="assets/lara_figure_5.pdf" target="_blank" rel="noopener" aria-label="Open the baseline comparison figure as a PDF"><img src="assets/lara_figure_5.webp" width="1519" height="1356" loading="lazy" alt="Bar charts comparing Ours, Naive IL, VLA, Conventional (Depth) and Conventional (RGB): (a) success rate per sub-task, (b) grasping pose, (c) number of recovery attempts." /></a>
+        <figcaption><strong>Comparison with task-controller variants.</strong> <strong>(a)</strong> Sub-task success rates for motor-core functional grasping, cable insertion and soldering (tool-tip alignment), 150 trials per sub-task. <strong>(b)</strong> Grasping outcomes, separating any successful grasp (arbitrary pose) from grasps within ±15° of the target pose. <strong>(c)</strong> Average number of recovery attempts during cable insertion.</figcaption>
+      </figure>
+      <p class="project-caption">The learned task controllers are compared with two learning-based variants and two conventional pipelines. <strong>Naive IL</strong> keeps the same imitation-learning framework but drops the structured image-processing pipeline and learns directly from full-resolution stereo RGB. <strong>VLA</strong> is a fine-tuned vision-language-action model (π<sub>0.5</sub>) with far more capacity and large-scale pretraining. The <strong>conventional</strong> baselines estimate poses with image segmentation and depth or RGB sensing and generate waypoints by rule; each applies only to some sub-tasks. Our controllers succeed in <strong>over 99%</strong> of trials on all three sub-tasks. The generic learning-based variants grasp the motor core almost as often, but seldom in the correct pose, and they need several recovery attempts per cable insertion where ours needs almost none. On this data budget, structured observations and task-specific inductive biases, rather than model capacity, are what make a learned controller reliable.</p>
     </section>
 
     <section id="adaptation" class="project-section" aria-labelledby="adaptation-title">
