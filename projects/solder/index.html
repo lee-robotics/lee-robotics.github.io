@@ -34,8 +34,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Barlow+Condensed:wght@600&display=swap" />
   <!-- The ?v= query makes browsers refetch the stylesheets after an edit; bump it when they change. -->
-  <link rel="stylesheet" href="../../assets/css/styles.css?v=20261021b" />
-  <link rel="stylesheet" href="styles.css?v=20261021b" />
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=20261021c" />
+  <link rel="stylesheet" href="styles.css?v=20261021c" />
 </head>
 <body>
   <div id="siteHeader"></div>
@@ -115,17 +115,17 @@
         <a class="section-head-link" href="https://youtu.be/-1WD8HGuK5w" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
       </div>
       <div class="project-split">
-        <div class="project-split-main">
-          <div class="video">
-            <iframe src="https://www.youtube-nocookie.com/embed/-1WD8HGuK5w" title="Continuous operation on the Neuromeka Pohang electric-motor production line" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <p class="project-caption">We deployed the system through continuous operation on a live electric-motor production line at the Neuromeka Pohang factory. Throughout the deployment, the system produced <strong>108 motors</strong> over approximately <strong>5 hours 10 minutes</strong>.</p>
-          <p class="project-caption">Across the run, the robot executed 324 cable insertion-and-solder operations. Two operations failed due to premature insertion termination, yielding a success rate of <strong>99.4%</strong> per operation. Processed motors passed the downstream <strong>QC tests</strong> used in routine production: tensile and electrical tests. The system achieved <strong>near-human takt time</strong> with <strong>reduced cycle-time variability</strong> while consistently producing <strong>high-quality solder joints</strong> comparable to those of experienced operators.</p>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/-1WD8HGuK5w" title="Continuous operation on the Neuromeka Pohang electric-motor production line" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <figure class="project-figure project-figure-narrow">
           <a class="project-figure-link" href="assets/production_validation.webp" target="_blank" rel="noopener" aria-label="Open the production validation figure at full resolution"><img src="assets/production_validation.webp" width="1500" height="2098" loading="lazy" alt="Production validation figure comparing robot and human cycle times, quality-control tests, projected throughput, and solder-joint appearance." /></a>
           <figcaption><strong>(a)</strong> Production results: process time against human operators, the 108 motors produced, and the QC pass rate. <strong>(b)</strong> Projected throughput over an 8-hour shift. <strong>(c)</strong> Blind top-2 preference test on solder-joint quality (50 people).</figcaption>
         </figure>
+        <div class="project-split-text">
+        <p class="project-caption">We deployed the system through continuous operation on a live electric-motor production line at the Neuromeka Pohang factory. Throughout the deployment, the system produced <strong>108 motors</strong> over approximately <strong>5 hours 10 minutes</strong>.</p>
+        <p class="project-caption">Across the run, the robot executed 324 cable insertion-and-solder operations. Two operations failed due to premature insertion termination, yielding a success rate of <strong>99.4%</strong> per operation. Processed motors passed the downstream <strong>QC tests</strong> used in routine production: tensile and electrical tests. The system achieved <strong>near-human takt time</strong> with <strong>reduced cycle-time variability</strong> while consistently producing <strong>high-quality solder joints</strong> comparable to those of experienced operators.</p>
+        </div>
       </div>
     </section>
 
@@ -135,17 +135,17 @@
         <a class="section-head-link" href="https://youtu.be/iuldg_uB5jU" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
       </div>
       <div class="project-split">
-        <div class="project-split-main">
-          <div class="video">
-            <iframe src="https://www.youtube-nocookie.com/embed/iuldg_uB5jU" title="Neural controllers adapting to variation in motor pose, hole position, and cable bending" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-          <p class="project-caption">Neural controllers <strong>handled inevitable variability</strong> during the production process. They adjusted motion to handle randomness in motor pose, hole position, and cable bending.</p>
-          <p class="project-caption">The learned task controllers are compared with two learning-based variants and two conventional pipelines. <strong>Naive IL</strong> keeps the same imitation-learning framework but drops the structured image-processing pipeline and learns directly from full-resolution stereo RGB. <strong>VLA</strong> is a fine-tuned vision-language-action model (π<sub>0.5</sub>) with far more capacity and large-scale pretraining. The <strong>conventional</strong> baselines estimate poses with image segmentation and depth or RGB sensing and generate waypoints by rule; each applies only to some sub-tasks. Our controllers succeed in <strong>over 99%</strong> of trials on all three sub-tasks. The generic learning-based variants grasp the motor core almost as often, but seldom in the correct pose, and they need several recovery attempts per cable insertion where ours needs almost none. On this data budget, structured observations and task-specific inductive biases, rather than model capacity, are what make a learned controller reliable.</p>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/iuldg_uB5jU" title="Neural controllers adapting to variation in motor pose, hole position, and cable bending" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <figure class="project-figure project-figure-narrow">
           <a class="project-figure-link" href="assets/lara_figure_5.pdf" target="_blank" rel="noopener" aria-label="Open the baseline comparison figure as a PDF"><img src="assets/lara_figure_5.webp" width="1519" height="1356" loading="lazy" alt="Bar charts comparing Ours, Naive IL, VLA, Conventional (Depth) and Conventional (RGB): (a) success rate per sub-task, (b) grasping pose, (c) number of recovery attempts." /></a>
           <figcaption><strong>Comparison with task-controller variants.</strong> <strong>(a)</strong> Sub-task success rates for motor-core functional grasping, cable insertion and soldering (tool-tip alignment), 150 trials per sub-task. <strong>(b)</strong> Grasping outcomes, separating any successful grasp (arbitrary pose) from grasps within ±15° of the target pose. <strong>(c)</strong> Average number of recovery attempts during cable insertion.</figcaption>
         </figure>
+        <div class="project-split-text">
+        <p class="project-caption">Neural controllers <strong>handled inevitable variability</strong> during the production process. They adjusted motion to handle randomness in motor pose, hole position, and cable bending.</p>
+        <p class="project-caption">The learned task controllers are compared with two learning-based variants and two conventional pipelines. <strong>Naive IL</strong> keeps the same imitation-learning framework but drops the structured image-processing pipeline and learns directly from full-resolution stereo RGB. <strong>VLA</strong> is a fine-tuned vision-language-action model (π<sub>0.5</sub>) with far more capacity and large-scale pretraining. The <strong>conventional</strong> baselines estimate poses with image segmentation and depth or RGB sensing and generate waypoints by rule; each applies only to some sub-tasks. Our controllers succeed in <strong>over 99%</strong> of trials on all three sub-tasks. The generic learning-based variants grasp the motor core almost as often, but seldom in the correct pose, and they need several recovery attempts per cable insertion where ours needs almost none. On this data budget, structured observations and task-specific inductive biases, rather than model capacity, are what make a learned controller reliable.</p>
+        </div>
       </div>
     </section>
 

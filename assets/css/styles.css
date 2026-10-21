@@ -1657,15 +1657,32 @@ a.student-name {
   padding: 10px;
 }
 
-/* A video with a figure beside it; the figure drops below on phones. */
+/* A video with a figure beside it. Source order is video, figure, text: on
+   desktop the figure takes the right column beside both, on phones the
+   single column keeps that order so the figure follows the video. */
 .project-split {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: 20px;
+  /* The 1fr second row absorbs a figure taller than video + text, so the
+     text stays right under the video. */
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'video figure'
+    'text figure';
+  gap: 12px 20px;
   align-items: start;
 }
 
-.project-split-main {
+.project-split > .video {
+  grid-area: video;
+}
+
+.project-split > figure {
+  grid-area: figure;
+}
+
+.project-split-text {
+  grid-area: text;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1769,5 +1786,11 @@ a.student-name {
 
   .project-split {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'video'
+      'figure'
+      'text';
+    gap: 16px;
   }
 }
