@@ -1,7 +1,6 @@
 /* Layout rules. For typography and spacing experiments, edit theme.css. */
 :root { --sans: var(--font-family); }
 
-* { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 48px; }
 body { margin: 0; background: #fff; color: var(--text); font: var(--body-font-size)/var(--line-height) var(--sans); }
 h1, h2, h3, h4, h5, h6, p, figure { margin: 0; }
@@ -131,8 +130,6 @@ figcaption strong { color: var(--text); }
 .pipeline small { display: block; font-size: 11px; margin-top: 12px; }
 .pipeline .reflex-stage { border-color: #788e9e; background: #f2f6f9; }
 .pipeline-arrow { color: var(--muted); }
-.paper-overview { max-width: 540px; margin: 30px auto; }
-.paper-overview figcaption { text-align: left; }
 .method-details { margin-top: 25px; }
 
 .primitive-figure { margin-top: var(--space-6); border: 1px solid var(--line); border-radius: calc(var(--radius) * 2); }

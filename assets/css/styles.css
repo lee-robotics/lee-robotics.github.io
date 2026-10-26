@@ -27,7 +27,6 @@
 
   /* Hover tints. */
   --color-hover-row: color-mix(in srgb, var(--color-accent-bright) 5%, transparent);
-  --color-hover-card: color-mix(in srgb, var(--color-accent-bright) 6%, transparent);
 
   --color-badge-bg: #eef6ff;
   --color-badge-text: #2c455d;
@@ -625,12 +624,6 @@ h2 {
   max-width: 110px;
   width: auto;
   object-fit: contain;
-}
-
-/* The KAIST file includes the swoosh below the letters; at this height its
-   letters match the POSTECH wordmark, which the width cap renders ~9px tall. */
-.partner-lab-mark[src*='kaist'] {
-  height: 16px;
 }
 
 .partner-lab-link {
@@ -1591,11 +1584,6 @@ a.student-name {
   background: var(--color-hover-row);
   border-color: var(--color-accent-bright);
   color: var(--color-accent-bright);
-}
-
-.project-link-note {
-  font-size: 12px;
-  color: var(--color-meta);
 }
 
 /* Publication status beside the links, in the accent so it stands out. */

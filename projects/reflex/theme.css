@@ -7,7 +7,6 @@
   --body-font-size: 15px;
   --line-height: 1.6;
   --reading-width: none;       /* prose fills the column, like the rest of the site */
-  --page-width: var(--content-width);
 
   /* Calibrated SVG widths: regular diagram text / plot axis labels match body text.
      Coefficients are viewBox width divided by the SVG's transformed label size. */

@@ -4,7 +4,7 @@ A static academic project page, hosted as part of `lee-robotics.github.io`: it l
 
 ## Visual style
 
-See [STYLE_GUIDE.md](STYLE_GUIDE.md) for the academic typography, figures, tables, controls, and accessibility conventions. Shared visual tokens live in `theme.css`; component rules live in `styles.css`.
+Shared visual tokens live in `theme.css`; component rules live in `styles.css`.
 
 ## The two places to edit
 
@@ -40,6 +40,7 @@ Reading width and font size are independent: by default prose fills the 960px co
 | `content/primitives.md` | Section introduction and all three interactive primitive descriptions |
 | `content/training.md` | Training text, pipeline descriptions, figure caption |
 | `content/results.md` | EIR, peg-in-hole, surface tracking, table note, limitations |
+| `content/bibtex.md` | BibTeX section heading and entry |
 
 Each file is split into named text blocks:
 
@@ -73,7 +74,7 @@ For frequent editing, leave the watcher running in another terminal:
 python3 build.py --watch
 ```
 
-The watcher rebuilds when you save content or any template, and detects added/removed section files. **Refresh the browser manually** to see the result. CSS does not need the watcher. If a watcher was already running before the section-template feature was added, restart it once.
+The watcher rebuilds when you save content or any template, and detects added/removed section files. **Refresh the browser manually** to see the result. CSS does not need the watcher.
 
 ## HTML structure: one file per section
 
@@ -83,9 +84,9 @@ templates/
   sections/
     10-overview.html           # Uses content/overview.md
     20-motivation.html         # Uses content/motivation.md
-    30-primitives.html         # Uses content/primitives.md
-    40-training.html           # Uses content/training.md
+    40-training.html           # Uses content/training.md and content/primitives.md
     50-results.html            # Uses content/results.md
+    60-bibtex.html             # Uses content/bibtex.md
 ```
 
 Edit the corresponding section HTML for structural changes. `templates/index.html` contains `{{sections}}` and `{{navigation}}` slots; the build fills both automatically. You do not need to list section files in the shell or in Python/JavaScript.
@@ -168,14 +169,12 @@ Edit the card title in `content/results.md` (`peg-video-heading`), its structure
 - `script.js` — section tracking.
 - `primitive-viewer.js` — interactive Three.js force-field viewer, radio selection, axis dragging, position sliders, and spring–damper force laws.
 - `assets/vendor/three.min.js` — locally vendored Three.js 0.158.0 (MIT license alongside it); no CDN required at runtime.
-- `assets/` — supplied paper, figure, videos, and posters.
+- `assets/` — figures, videos and posters.
 
 To deploy, run `python3 build.py` and commit `index.html` with the rest of the site; the page relies on `../../assets/` (stylesheet, header/footer) and `../../favicon.ico`. No Python or Markdown processing is needed on the host.
 
 ## Research content
 
-The supplied PDF identifies **Anonymous Authors**. No venue, acceptance status, code-release link, or affiliation has been invented. Reported results come from Sections IV-B and IV-D and Table II. Hardware and simulation results are labeled separately; insertion forces are estimates, not direct measurements. The primitive explorer is conceptual, not a physics simulation.
+Reported results come from Sections IV-B and IV-D and Table II. Hardware and simulation results are labeled separately; insertion forces are estimates, not direct measurements. The primitive explorer is conceptual, not a physics simulation.
 
 Videos use H.264 MP4 rather than GIF for size and quality. All clips were re-encoded for this site (peg-in-hole at 540p, the rest at 720p, `-crf 28`, silent tracks dropped), which took the assets from 263 MB to under 50 MB. The paper PDF is not bundled; the page links to arXiv.
-
-Before public release, confirm author details and permission to distribute the supplied paper/media. Add reviewed video captions if available.

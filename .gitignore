@@ -1,2 +1,4 @@
-tools/cv.html
 .DS_Store
+__pycache__/
+tools/cv.html
+projects/reflex/.index.html.tmp
