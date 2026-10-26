@@ -273,8 +273,26 @@
       "link": "https://doi.org/10.1109/LRA.2025.3583498",
       "hidden": false
     },
+    {
+      "year": 2025,
+      "title": "Culture: Can vervet monkeys learn from a robot?",
+      "authors": "Théo Lemeux, Mohammed Khouni, Michelle Moujahed, Robin Schmid, Giulia de Filippis, Joonho Lee, Marco Hutter, Charlotte Canteloup, Erica van de Waal",
+      "venue": "",
+      "award": "",
+      "link": "",
+      "hidden": false
+    },
     { "title": "Scalable multi-robot cooperation for multi-goal tasks using reinforcement learning" },
     { "title": "Exploring constrained reinforcement learning algorithms for quadrupedal locomotion" },
+    {
+      "year": 2023,
+      "title": "Seeing through the grass: Semantic pointcloud filter for support surface learning",
+      "authors": "Anqiao Li, Chenyu Yang, Jonas Frey, Joonho Lee, Cesar Cadena, Marco Hutter",
+      "venue": "IEEE RA-L",
+      "award": "",
+      "link": "https://arxiv.org/abs/2305.07995",
+      "hidden": false
+    },
     {
       "year": 2023,
       "title": "Learning-based design and control for quadrupedal robots with parallel-elastic actuators",
