@@ -55,14 +55,23 @@ def build_html(p):
                      f'{"<div class=s>Partners: "+esc(g["partners"])+"</div>" if g.get("partners") else ""}'
                      f'{"<div class=s>"+esc(g["amount"])+"</div>" if g.get("amount") else ""}</div></div>')
         section('Funding', rows)
-    if 'publications' not in hide:
+    def pub_rows(pubs):
         rows = ''
-        for pub in visible(p.get('publications')):
+        for pub in pubs:
             tail = ' · '.join(filter(None, [pub.get('venue'), pub.get('award')]))
             rows += (f'<div class="row"><div class="when">{esc(pub.get("year"))}</div><div>'
                      f'<div class="p">{esc(pub.get("title"))}</div><div class="s">{esc(pub.get("authors"))}</div>'
                      f'<div class="s venue">{esc(tail)}</div></div></div>')
-        section('Selected publications', rows)
+        return rows
+
+    if 'publications' not in hide:
+        section('Selected publications', pub_rows(visible(p.get('publications'))))
+    if 'mentored' not in hide:
+        # An entry that gives only a title takes the rest from the publication with that title.
+        by_title = {pub.get('title'): pub for pub in (p.get('publications') or []) if pub}
+        papers = [{**{k: v for k, v in by_title.get(m.get('title'), {}).items() if k != 'hidden'}, **m}
+                  for m in visible(p.get('mentored'))]
+        section('Student & mentored papers', pub_rows(papers))
     if 'awards' not in hide:
         section('Awards', dated(visible(p.get('awards')), 'title', 'by', when='year'))
     if 'students' not in hide:

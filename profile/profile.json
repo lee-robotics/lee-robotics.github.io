@@ -261,6 +261,57 @@
       "hidden": true
     }
   ],
+  "mentored": [
+    { "title": "Proprioceptive reflex learning for contact-rich manipulation" },
+    { "title": "Learning-augmented robotic automation for real-world manufacturing" },
+    {
+      "year": 2025,
+      "title": "Gait optimization for underwater legged robots using data-driven hydrodynamic modeling and reinforcement learning",
+      "authors": "Seokyong Song, Taesik Kim, Seungmin Kim, Joonho Lee, Son-Cheol Yu",
+      "venue": "IEEE RA-L",
+      "award": "",
+      "link": "https://doi.org/10.1109/LRA.2025.3583498",
+      "hidden": false
+    },
+    { "title": "Scalable multi-robot cooperation for multi-goal tasks using reinforcement learning" },
+    { "title": "Exploring constrained reinforcement learning algorithms for quadrupedal locomotion" },
+    {
+      "year": 2023,
+      "title": "Learning-based design and control for quadrupedal robots with parallel-elastic actuators",
+      "authors": "Filip Bjelonic, Joonho Lee, Philip Arm, Dhionis Sako, Davide Tateo, Jan Peters, Marco Hutter",
+      "venue": "IEEE RA-L",
+      "award": "",
+      "link": "https://arxiv.org/abs/2301.03509",
+      "hidden": false
+    },
+    {
+      "year": 2023,
+      "title": "Advanced skills through multiple adversarial motion priors in reinforcement learning",
+      "authors": "Eric Vollenweider, Marko Bjelonic, Victor Klemm, Nikita Rudin, Joonho Lee, Marco Hutter",
+      "venue": "ICRA",
+      "award": "",
+      "link": "https://arxiv.org/abs/2203.14912",
+      "hidden": false
+    },
+    {
+      "year": 2022,
+      "title": "Meta reinforcement learning for optimal design of legged robots",
+      "authors": "Álvaro Belmonte-Baeza, Joonho Lee, Giorgio Valsecchi, Marco Hutter",
+      "venue": "IEEE RA-L",
+      "award": "",
+      "link": "https://arxiv.org/abs/2210.02750",
+      "hidden": false
+    },
+    {
+      "year": 2020,
+      "title": "DeepGait: Planning and control of quadrupedal gaits using deep reinforcement learning",
+      "authors": "Vassilios Tsounis, Mitja Alge, Joonho Lee, Farbod Farshidian, Marco Hutter",
+      "venue": "IEEE RA-L",
+      "award": "",
+      "link": "https://arxiv.org/abs/1909.08399",
+      "hidden": false
+    }
+  ],
   "awards": [
     {
       "year": "2025",

@@ -243,6 +243,24 @@ function buildAuthors(authors, ownName) {
   return node;
 }
 
+/** One publication row: year, title, authors, then venue, award and links. */
+function pubRow(pub, profile) {
+  const row = el('div', 'pub-row');
+  row.appendChild(el('div', 'pub-year', String(pub.year)));
+  const body = el('div', 'pub-body');
+  body.appendChild(el('div', 'pub-title', pub.title));
+  if (pub.authors) body.appendChild(buildAuthors(pub.authors, profile.name));
+  const meta = el('div', 'pub-meta');
+  if (pub.venue) meta.appendChild(el('span', 'pub-venue', pub.venue));
+  if (pub.award) meta.appendChild(el('span', 'badge', pub.award));
+  // An in-site project page (projects/<name>/) comes before the paper link.
+  if (pub.project) meta.appendChild(externalLink('Project page →', pub.project));
+  if (pub.link) meta.appendChild(externalLink('Link', pub.link));
+  body.appendChild(meta);
+  row.appendChild(body);
+  return row;
+}
+
 function renderPublications(profile) {
   const host = document.getElementById('profilePubs');
   if (!host) return;
@@ -251,23 +269,51 @@ function renderPublications(profile) {
     ? externalLink('Full list on Google Scholar →', profile.scholarUrl, 'section-head-link')
     : null;
   host.appendChild(headWithMeta('Selected publications', scholar));
+  visible(profile.publications).forEach((pub) => host.appendChild(pubRow(pub, profile)));
+}
 
-  visible(profile.publications).forEach((pub) => {
-    const row = el('div', 'pub-row');
-    row.appendChild(el('div', 'pub-year', String(pub.year)));
-    const body = el('div', 'pub-body');
-    body.appendChild(el('div', 'pub-title', pub.title));
-    if (pub.authors) body.appendChild(buildAuthors(pub.authors, profile.name));
-    const meta = el('div', 'pub-meta');
-    if (pub.venue) meta.appendChild(el('span', 'pub-venue', pub.venue));
-    if (pub.award) meta.appendChild(el('span', 'badge', pub.award));
-    // An in-site project page (projects/<name>/) comes before the paper link.
-    if (pub.project) meta.appendChild(externalLink('Project page →', pub.project));
-    if (pub.link) meta.appendChild(externalLink('Link', pub.link));
-    body.appendChild(meta);
-    row.appendChild(body);
-    host.appendChild(row);
-  });
+// ---- Student & mentored papers ----------------------------------------------
+
+/**
+ * A mentored entry that gives only a title takes its other fields (year,
+ * authors, venue, award, link, project page) from the publication with the
+ * same title, so a paper listed in both places is written once.
+ */
+function mentoredPaper(entry, profile) {
+  const pubs = Array.isArray(profile.publications) ? profile.publications : [];
+  const { hidden, ...base } = pubs.find((pub) => pub && pub.title === entry.title) || {};
+  return { ...base, ...entry };
+}
+
+function renderMentored(profile) {
+  const host = document.getElementById('profileMentored');
+  if (!host) return;
+  const papers = sectionHidden(profile, 'mentored')
+    ? []
+    : visible(profile.mentored).map((entry) => mentoredPaper(entry, profile));
+  if (!papers.length) { host.hidden = true; return; }
+
+  // Closed by default: only the heading shows until the toggle opens the list.
+  const head = el('div', 'section-head');
+  head.appendChild(el('h2', '', 'Student & mentored papers'));
+  const toggle = el('button', 'section-head-link section-toggle');
+  toggle.type = 'button';
+  toggle.setAttribute('aria-controls', 'profileMentoredList');
+  head.appendChild(toggle);
+  host.appendChild(head);
+
+  const list = el('div');
+  list.id = 'profileMentoredList';
+  papers.forEach((pub) => list.appendChild(pubRow(pub, profile)));
+  host.appendChild(list);
+
+  const sync = (expanded) => {
+    toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.textContent = expanded ? 'Hide list' : `Show list (${papers.length}) →`;
+    list.hidden = !expanded;
+  };
+  toggle.addEventListener('click', () => sync(toggle.getAttribute('aria-expanded') !== 'true'));
+  sync(false);
 }
 
 // ---- Talks ------------------------------------------------------------------
@@ -327,6 +373,7 @@ fetchJson(PROFILE_URL)
     renderCareer(profile);
     renderFundingAwards(profile);
     renderPublications(profile);
+    renderMentored(profile);
     renderStudents(profile);
     renderTalks(profile);
   })
