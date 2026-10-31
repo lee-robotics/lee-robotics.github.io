@@ -284,15 +284,6 @@
       "award": "",
       "link": "https://doi.org/10.1126/scirobotics.aau5872",
       "hidden": false
-    },
-    {
-      "year": 2018,
-      "title": "Per-contact iteration method for solving contact dynamics",
-      "authors": "Jemin Hwangbo, Joonho Lee, Marco Hutter",
-      "venue": "IEEE RA-L 3(2)",
-      "award": "",
-      "link": "https://doi.org/10.1109/LRA.2018.2792536",
-      "hidden": false
     }
   ],
   "mentored": [
