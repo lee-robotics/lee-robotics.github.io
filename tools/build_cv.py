@@ -11,7 +11,6 @@ Chrome (headless) on the PATH; fonts come from Google Fonts when online and
 fall back to the system sans-serif otherwise.
 """
 import html, json, os, shutil, subprocess, sys, tempfile
-from datetime import date
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'profile', 'profile.json')
@@ -110,11 +109,10 @@ h2 span { font-size: 8pt; font-weight: 400; color: #777; letter-spacing: 0.06em;
 .p { font-weight: 500; }
 .s { color: #555; }
 .venue { color: #0072ce; }
-footer { margin-top: 10pt; font-size: 8pt; color: #999; }
 '''
     fonts = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@600&display=swap">'
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>{esc(p.get("name"))} – CV</title>{fonts}<style>{css}</style></head>'
-            f'<body>{"".join(parts)}<footer>Generated from the lab website on {date.today().isoformat()}.</footer></body></html>')
+            f'<body>{"".join(parts)}</body></html>')
 
 def main():
     p = json.load(open(DATA, encoding='utf-8'))
