@@ -36,7 +36,7 @@
         "cols": 2,
         "rows": 1,
         "caption": "Learned robot soldering, validated on a live factory floor",
-        "sub": "Under review, Nature Communications",
+        "sub": "Nature Communications, accepted",
         "href": "projects/solder/"
       },
       {
@@ -179,7 +179,7 @@
       "year": 2026,
       "title": "Learning-augmented robotic automation for real-world manufacturing",
       "authors": "Yunho Kim, Quan Nguyen, Taewhan Kim, Youngjin Heo, Joonho Lee",
-      "venue": "arXiv:2604.22235 · under review at Nature Communications",
+      "venue": "Nature Communications, accepted · arXiv:2604.22235",
       "award": "",
       "link": "https://arxiv.org/abs/2604.22235",
       "project": "projects/solder/",
