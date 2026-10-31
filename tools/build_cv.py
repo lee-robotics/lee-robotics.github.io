@@ -5,7 +5,8 @@ Usage:  python3 tools/build_cv.py            # writes media/cv.pdf
         python3 tools/build_cv.py --html     # also keeps tools/cv.html for inspection
 
 Respects the same switches as the site: entries with "hidden": true and
-sections named in the top-level "hide" list are left out. Needs Google
+sections named in the top-level "hide" list are left out. Sections named in
+the top-level "cvHide" list are left out of the CV only. Needs Google
 Chrome (headless) on the PATH; fonts come from Google Fonts when online and
 fall back to the system sans-serif otherwise.
 """
@@ -15,13 +16,14 @@ from datetime import date
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, 'profile', 'profile.json')
 OUT = os.path.join(ROOT, 'media', 'cv.pdf')
-CHROME = next((c for c in ('google-chrome', 'google-chrome-stable', 'chromium', 'chromium-browser') if shutil.which(c)), None)
+CHROME = next((c for c in ('google-chrome', 'google-chrome-stable', 'chromium', 'chromium-browser',
+                           '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome') if shutil.which(c)), None)
 
 def esc(s): return html.escape(str(s or ''))
 def visible(items): return [x for x in (items or []) if x and x.get('hidden') is not True]
 
 def build_html(p):
-    hide = set(p.get('hide') or [])
+    hide = set(p.get('hide') or []) | set(p.get('cvHide') or [])
     parts = []
     # Header
     links = ' · '.join(f'<a href="{esc(l["href"])}">{esc(l["label"])}</a>' for l in p.get('links', []) if not l['href'].startswith('media/'))
@@ -40,7 +42,8 @@ def build_html(p):
 
     def dated(items, primary, secondary, when='when'):
         return ''.join(f'<div class="row"><div class="when">{esc(x.get(when))}</div><div><div class="p">{esc(x.get(primary))}</div>'
-                       f'{"<div class=s>"+esc(x.get(secondary))+"</div>" if x.get(secondary) else ""}</div></div>' for x in items)
+                       f'{"<div class=s>"+esc(x.get(secondary))+"</div>" if x.get(secondary) else ""}'
+                       f'{"<div class=s>"+esc(x.get("note"))+"</div>" if x.get("note") else ""}</div></div>' for x in items)
 
     if 'career' not in hide:
         section('Experience', dated(visible(p.get('experience')), 'org', 'role'))
@@ -74,6 +77,8 @@ def build_html(p):
         section('Student & mentored papers', pub_rows(papers))
     if 'awards' not in hide:
         section('Awards', dated(visible(p.get('awards')), 'title', 'by', when='year'))
+    if 'service' not in hide:
+        section('Service & teaching', dated(visible(p.get('service')), 'title', 'org'))
     if 'students' not in hide:
         rows = ''.join(f'<div class="row two"><div class="p">{esc(s.get("name"))}</div><div class="s">{esc(s.get("note"))}</div></div>'
                        for s in visible(p.get('students')))

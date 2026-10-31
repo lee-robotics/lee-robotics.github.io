@@ -147,12 +147,13 @@ function renderMosaic(mosaic = {}) {
 
 // ---- Two-column list blocks -------------------------------------------------
 
-function dateRow(when, primary, secondary, dateClass = 'date-120') {
+function dateRow(when, primary, secondary, dateClass = 'date-120', note = '') {
   const row = el('div', `dated-row ${dateClass}`);
   row.appendChild(el('div', 'dated-row-when', when));
   const body = el('div');
   body.appendChild(el('div', 'dated-row-primary', primary));
   if (secondary) body.appendChild(el('div', 'dated-row-secondary', secondary));
+  if (note) body.appendChild(el('div', 'dated-row-secondary', note));
   row.appendChild(body);
   return row;
 }
@@ -171,7 +172,18 @@ function renderCareer(profile) {
   host.appendChild(column('Experience',
     visible(profile.experience).map((w) => dateRow(w.when, w.org, w.role))));
   host.appendChild(column('Education',
-    visible(profile.education).map((e) => dateRow(e.when, e.org, e.degree))));
+    visible(profile.education).map((e) => dateRow(e.when, e.org, e.degree, 'date-120', e.note))));
+}
+
+// ---- Service & teaching ------------------------------------------------------
+
+function renderService(profile) {
+  const host = document.getElementById('profileService');
+  if (!host) return;
+  const items = sectionHidden(profile, 'service') ? [] : visible(profile.service);
+  if (!items.length) { host.hidden = true; return; }
+  host.appendChild(headWithMeta('Service & teaching'));
+  items.forEach((s) => host.appendChild(dateRow(s.when || '', s.title, s.org)));
 }
 
 // ---- Funding and awards (side by side) ---------------------------------------
@@ -252,7 +264,8 @@ function pubRow(pub, profile) {
   if (pub.authors) body.appendChild(buildAuthors(pub.authors, profile.name));
   const meta = el('div', 'pub-meta');
   if (pub.venue) meta.appendChild(el('span', 'pub-venue', pub.venue));
-  if (pub.award) meta.appendChild(el('span', 'badge', pub.award));
+  // Several distinctions are separated by " · ", e.g. "Best Paper Award · Cover article".
+  if (pub.award) pub.award.split(' · ').forEach((a) => meta.appendChild(el('span', 'badge', a)));
   // An in-site project page (projects/<name>/) comes before the paper link.
   if (pub.project) meta.appendChild(externalLink('Project page →', pub.project));
   if (pub.link) meta.appendChild(externalLink('Link', pub.link));
@@ -372,6 +385,7 @@ fetchJson(PROFILE_URL)
     renderMosaic(profile.mosaic);
     renderCareer(profile);
     renderFundingAwards(profile);
+    renderService(profile);
     renderPublications(profile);
     renderMentored(profile);
     renderStudents(profile);

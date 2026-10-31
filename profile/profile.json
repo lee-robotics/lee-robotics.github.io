@@ -19,7 +19,12 @@
     }
   ],
   "scholarUrl": "https://scholar.google.com/citations?user=6Htb7swAAAAJ&hl=en",
-  "hide": ["students"],
+  "hide": [
+    "students"
+  ],
+  "cvHide": [
+    "mentored"
+  ],
   "mosaic": {
     "layout": "custom",
     "columns": 8,
@@ -105,17 +110,18 @@
       "org": "Neuromeka Co., Ltd.",
       "role": "Director, AI Group · Military service"
     },
-  {
-    "when": "2022 – 2024",
-    "org": "RIVR",
-    "role": "Conceived and developed the initial RL-based control and navigation stack"
-  }
+    {
+      "when": "2022 – 2024",
+      "org": "RIVR",
+      "role": "Conceived and developed the initial RL-based control and navigation stack"
+    }
   ],
   "education": [
     {
       "when": "2018 – 2024",
       "org": "ETH Zurich, Robotic Systems Lab",
-      "degree": "PhD, Mechanical Engineering"
+      "degree": "PhD, Mechanical Engineering",
+      "note": "Thesis: Advancing the Autonomy of Legged Robots: From the Lab to the Real-world · Supervisor: Marco Hutter · Co-examiner: Vladlen Koltun"
     },
     {
       "when": "2017 – 2018",
@@ -152,7 +158,7 @@
   "publications": [
     {
       "year": 2026,
-      "title": "Proprioceptive reflex learning for contact-rich manipulation",
+      "title": "Learning reflexive behavior for contact-rich manipulation",
       "authors": "Quan Nguyen, Yunho Kim, Joonho Lee",
       "venue": "Submitted to ICRA 2027",
       "award": "",
@@ -171,6 +177,15 @@
       "hidden": false
     },
     {
+      "year": 2026,
+      "title": "AHEAD: Anticipatory hand-driven teleoperation via human intent prediction",
+      "authors": "Seok Joon Kim, Joonho Lee, Federica Spinola, Taein Kwon, Mohsen Moghaddam",
+      "venue": "IROS 2026",
+      "award": "",
+      "link": "https://arxiv.org/abs/2607.15172",
+      "hidden": false
+    },
+    {
       "year": 2025,
       "title": "Learning fast, tool-aware collision avoidance for collaborative robots",
       "authors": "Joonho Lee, Yunho Kim, Seokjoon Kim, Quan Nguyen, Youngjin Heo",
@@ -185,7 +200,7 @@
       "authors": "Sehoon Ha, Joonho Lee, Michiel van de Panne, Zhaoming Xie, Wenhao Yu, Majid Khadiv",
       "venue": "IJRR 44(8)",
       "award": "",
-      "link": "",
+      "link": "https://doi.org/10.1177/02783649241312698",
       "hidden": false
     },
     {
@@ -194,7 +209,7 @@
       "authors": "Takahiro Miki, Joonho Lee, Lorenz Wellhausen, Marco Hutter",
       "venue": "ICRA",
       "award": "Best Paper Award in Service Robotics",
-      "link": "",
+      "link": "https://doi.org/10.1109/ICRA57147.2024.10610271",
       "hidden": false
     },
     {
@@ -203,7 +218,7 @@
       "authors": "Joonho Lee*, Tianxu An*, Marko Bjelonic, Flavio De Vincenti, Marco Hutter",
       "venue": "IEEE RA-L",
       "award": "",
-      "link": "",
+      "link": "https://doi.org/10.1109/LRA.2024.3521183",
       "hidden": false
     },
     {
@@ -212,7 +227,7 @@
       "authors": "Joonho Lee*, Lukas Schroth*, Victor Klemm, Marko Bjelonic, Alexander Reske, Marco Hutter",
       "venue": "IROS",
       "award": "",
-      "link": "",
+      "link": "https://doi.org/10.1109/IROS58592.2024.10801341",
       "hidden": true
     },
     {
@@ -221,7 +236,7 @@
       "authors": "Joonho Lee, Marko Bjelonic, Alexander Reske, Lorenz Wellhausen, Takahiro Miki, Marco Hutter",
       "venue": "Science Robotics 9(89)",
       "award": "",
-      "link": "",
+      "link": "https://doi.org/10.1126/scirobotics.adi9641",
       "hidden": false
     },
     {
@@ -234,6 +249,15 @@
       "hidden": false
     },
     {
+      "year": 2024,
+      "title": "Rethinking robustness assessment: Adversarial attacks on learning-based quadrupedal locomotion controllers",
+      "authors": "Fan Shi, Chong Zhang, Takahiro Miki, Joonho Lee, Marco Hutter, Stelian Coros",
+      "venue": "RSS",
+      "award": "",
+      "link": "https://arxiv.org/abs/2405.12424",
+      "hidden": false
+    },
+    {
       "year": 2022,
       "title": "Learning robust perceptive locomotion for quadrupedal robots in the wild",
       "authors": "Takahiro Miki, Joonho Lee, Jemin Hwangbo, Lorenz Wellhausen, Vladlen Koltun, Marco Hutter",
@@ -243,11 +267,56 @@
       "hidden": false
     },
     {
+      "year": 2022,
+      "title": "Combining learning-based locomotion policy with model-based manipulation for legged mobile manipulators",
+      "authors": "Yuntao Ma, Farbod Farshidian, Takahiro Miki, Joonho Lee, Marco Hutter",
+      "venue": "IEEE RA-L 7(2)",
+      "award": "",
+      "link": "https://doi.org/10.1109/LRA.2022.3143567",
+      "hidden": false
+    },
+    {
+      "year": 2022,
+      "title": "CERBERUS: Autonomous legged and aerial robotic exploration in the tunnel and urban circuits of the DARPA Subterranean Challenge",
+      "authors": "Marco Tranzatto, Frank Mascarich, Lukas Bernreiter, … Joonho Lee, … Marco Hutter, Roland Siegwart, Mark Mueller, Maurice Fallon, Kostas Alexis",
+      "venue": "Field Robotics 2",
+      "award": "",
+      "link": "https://doi.org/10.55417/fr.2022011",
+      "hidden": false
+    },
+    {
+      "year": 2022,
+      "title": "Control of wheeled-legged quadrupeds using deep reinforcement learning",
+      "authors": "Joonho Lee, Marko Bjelonic, Marco Hutter",
+      "venue": "CLAWAR",
+      "award": "",
+      "link": "https://doi.org/10.1007/978-3-031-15226-9_14",
+      "hidden": false
+    },
+    {
+      "year": 2022,
+      "title": "A survey of wheeled-legged robots",
+      "authors": "Marko Bjelonic, Victor Klemm, Joonho Lee, Marco Hutter",
+      "venue": "CLAWAR",
+      "award": "",
+      "link": "https://doi.org/10.1007/978-3-031-15226-9_11",
+      "hidden": false
+    },
+    {
+      "year": 2021,
+      "title": "Circus ANYmal: A quadruped learning dexterous manipulation with its limbs",
+      "authors": "Fan Shi, Timon Homberger, Joonho Lee, Takahiro Miki, Moju Zhao, Farbod Farshidian, Kei Okada, Masayuki Inaba, Marco Hutter",
+      "venue": "ICRA",
+      "award": "",
+      "link": "https://doi.org/10.1109/ICRA48506.2021.9561926",
+      "hidden": false
+    },
+    {
       "year": 2020,
       "title": "Learning quadrupedal locomotion over challenging terrain",
       "authors": "Joonho Lee, Jemin Hwangbo, Lorenz Wellhausen, Vladlen Koltun, Marco Hutter",
       "venue": "Science Robotics 5(47)",
-      "award": "IEEE RAS TC-MBOR Best Paper Award",
+      "award": "IEEE RAS TC-MBOR Best Paper Award · Cover article",
       "link": "https://leggedrobotics.github.io/rl-blindloco/",
       "hidden": false
     },
@@ -257,13 +326,35 @@
       "authors": "Jemin Hwangbo, Joonho Lee, Alexey Dosovitskiy, Dario Bellicoso, Vassilios Tsounis, Vladlen Koltun, Marco Hutter",
       "venue": "Science Robotics 4(26)",
       "award": "",
-      "link": "",
+      "link": "https://doi.org/10.1126/scirobotics.aau5872",
       "hidden": true
+    },
+    {
+      "year": 2019,
+      "title": "Robust recovery controller for a quadrupedal robot using deep reinforcement learning",
+      "authors": "Joonho Lee, Jemin Hwangbo, Marco Hutter",
+      "venue": "arXiv:1901.07517",
+      "award": "",
+      "link": "https://arxiv.org/abs/1901.07517",
+      "hidden": false
+    },
+    {
+      "year": 2018,
+      "title": "Per-contact iteration method for solving contact dynamics",
+      "authors": "Jemin Hwangbo, Joonho Lee, Marco Hutter",
+      "venue": "IEEE RA-L 3(2)",
+      "award": "",
+      "link": "https://doi.org/10.1109/LRA.2018.2792536",
+      "hidden": false
     }
   ],
   "mentored": [
-    { "title": "Proprioceptive reflex learning for contact-rich manipulation" },
-    { "title": "Learning-augmented robotic automation for real-world manufacturing" },
+    {
+      "title": "Learning reflexive behavior for contact-rich manipulation"
+    },
+    {
+      "title": "Learning-augmented robotic automation for real-world manufacturing"
+    },
     {
       "year": 2025,
       "title": "Gait optimization for underwater legged robots using data-driven hydrodynamic modeling and reinforcement learning",
@@ -282,8 +373,12 @@
       "link": "",
       "hidden": false
     },
-    { "title": "Scalable multi-robot cooperation for multi-goal tasks using reinforcement learning" },
-    { "title": "Exploring constrained reinforcement learning algorithms for quadrupedal locomotion" },
+    {
+      "title": "Scalable multi-robot cooperation for multi-goal tasks using reinforcement learning"
+    },
+    {
+      "title": "Exploring constrained reinforcement learning algorithms for quadrupedal locomotion"
+    },
     {
       "year": 2023,
       "title": "Seeing through the grass: Semantic pointcloud filter for support surface learning",
@@ -355,6 +450,28 @@
       "year": "2019",
       "title": "Willi Studer Prize (Best Graduate), Robotics, Systems and Control",
       "by": "D-MAVT, ETH Zurich"
+    }
+  ],
+  "service": [
+    {
+      "when": "2025 – 2026",
+      "title": "Area Chair",
+      "org": "Conference on Robot Learning (CoRL)"
+    },
+    {
+      "when": "",
+      "title": "Associate Editor",
+      "org": "IEEE Robotics and Automation Letters (RA-L)"
+    },
+    {
+      "when": "2025",
+      "title": "Workshop organizer: The Future of Hybrid Mobility",
+      "org": "IEEE/RSJ IROS 2025"
+    },
+    {
+      "when": "2019 – 2023",
+      "title": "Teaching assistant, Robot Dynamics",
+      "org": "ETH Zurich"
     }
   ],
   "students": [
