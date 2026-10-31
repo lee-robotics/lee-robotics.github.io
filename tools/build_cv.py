@@ -61,7 +61,7 @@ def build_html(p):
     def pub_rows(pubs):
         rows = ''
         for pub in pubs:
-            tail = ' · '.join(filter(None, [pub.get('venue'), pub.get('award')]))
+            tail = ' · '.join(filter(None, [pub.get('cvVenue') or pub.get('venue'), pub.get('award')]))
             rows += (f'<div class="row"><div class="when">{esc(pub.get("year"))}</div><div>'
                      f'<div class="p">{esc(pub.get("title"))}</div><div class="s">{esc(pub.get("authors"))}</div>'
                      f'<div class="s venue">{esc(tail)}</div></div></div>')
