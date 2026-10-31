@@ -158,6 +158,15 @@
   "publications": [
     {
       "year": 2026,
+      "title": "Accurate pouring-based powder dispensing via world models",
+      "authors": "Seungmin Son, Dongwoo Ko, Young Jin Heo, Wan Kyun Chung, Joonho Lee",
+      "venue": "Submitted to IEEE T-RL (Oct 2026)",
+      "award": "",
+      "link": "",
+      "hidden": false
+    },
+    {
+      "year": 2026,
       "title": "Learning reflexive behavior for contact-rich manipulation",
       "authors": "Quan Nguyen, Yunho Kim, Joonho Lee",
       "venue": "Submitted to ICRA 2027",
@@ -174,15 +183,6 @@
       "award": "",
       "link": "https://arxiv.org/abs/2604.22235",
       "project": "projects/solder/",
-      "hidden": false
-    },
-    {
-      "year": 2026,
-      "title": "AHEAD: Anticipatory hand-driven teleoperation via human intent prediction",
-      "authors": "Seok Joon Kim, Joonho Lee, Federica Spinola, Taein Kwon, Mohsen Moghaddam",
-      "venue": "IROS 2026",
-      "award": "",
-      "link": "https://arxiv.org/abs/2607.15172",
       "hidden": false
     },
     {
@@ -349,6 +349,9 @@
     }
   ],
   "mentored": [
+    {
+      "title": "Accurate pouring-based powder dispensing via world models"
+    },
     {
       "title": "Learning reflexive behavior for contact-rich manipulation"
     },
