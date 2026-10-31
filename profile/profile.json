@@ -219,7 +219,7 @@
       "venue": "IEEE RA-L",
       "award": "",
       "link": "https://doi.org/10.1109/LRA.2024.3521183",
-      "hidden": false
+      "hidden": true
     },
     {
       "year": 2024,
@@ -249,15 +249,6 @@
       "hidden": false
     },
     {
-      "year": 2024,
-      "title": "Rethinking robustness assessment: Adversarial attacks on learning-based quadrupedal locomotion controllers",
-      "authors": "Fan Shi, Chong Zhang, Takahiro Miki, Joonho Lee, Marco Hutter, Stelian Coros",
-      "venue": "RSS",
-      "award": "",
-      "link": "https://arxiv.org/abs/2405.12424",
-      "hidden": false
-    },
-    {
       "year": 2022,
       "title": "Learning robust perceptive locomotion for quadrupedal robots in the wild",
       "authors": "Takahiro Miki, Joonho Lee, Jemin Hwangbo, Lorenz Wellhausen, Vladlen Koltun, Marco Hutter",
@@ -268,47 +259,11 @@
     },
     {
       "year": 2022,
-      "title": "Combining learning-based locomotion policy with model-based manipulation for legged mobile manipulators",
-      "authors": "Yuntao Ma, Farbod Farshidian, Takahiro Miki, Joonho Lee, Marco Hutter",
-      "venue": "IEEE RA-L 7(2)",
-      "award": "",
-      "link": "https://doi.org/10.1109/LRA.2022.3143567",
-      "hidden": false
-    },
-    {
-      "year": 2022,
       "title": "CERBERUS: Autonomous legged and aerial robotic exploration in the tunnel and urban circuits of the DARPA Subterranean Challenge",
       "authors": "Marco Tranzatto, Frank Mascarich, Lukas Bernreiter, … Joonho Lee, … Marco Hutter, Roland Siegwart, Mark Mueller, Maurice Fallon, Kostas Alexis",
       "venue": "Field Robotics 2",
       "award": "",
       "link": "https://doi.org/10.55417/fr.2022011",
-      "hidden": false
-    },
-    {
-      "year": 2022,
-      "title": "Control of wheeled-legged quadrupeds using deep reinforcement learning",
-      "authors": "Joonho Lee, Marko Bjelonic, Marco Hutter",
-      "venue": "CLAWAR",
-      "award": "",
-      "link": "https://doi.org/10.1007/978-3-031-15226-9_14",
-      "hidden": false
-    },
-    {
-      "year": 2022,
-      "title": "A survey of wheeled-legged robots",
-      "authors": "Marko Bjelonic, Victor Klemm, Joonho Lee, Marco Hutter",
-      "venue": "CLAWAR",
-      "award": "",
-      "link": "https://doi.org/10.1007/978-3-031-15226-9_11",
-      "hidden": false
-    },
-    {
-      "year": 2021,
-      "title": "Circus ANYmal: A quadruped learning dexterous manipulation with its limbs",
-      "authors": "Fan Shi, Timon Homberger, Joonho Lee, Takahiro Miki, Moju Zhao, Farbod Farshidian, Kei Okada, Masayuki Inaba, Marco Hutter",
-      "venue": "ICRA",
-      "award": "",
-      "link": "https://doi.org/10.1109/ICRA48506.2021.9561926",
       "hidden": false
     },
     {
@@ -328,15 +283,6 @@
       "award": "",
       "link": "https://doi.org/10.1126/scirobotics.aau5872",
       "hidden": true
-    },
-    {
-      "year": 2019,
-      "title": "Robust recovery controller for a quadrupedal robot using deep reinforcement learning",
-      "authors": "Joonho Lee, Jemin Hwangbo, Marco Hutter",
-      "venue": "arXiv:1901.07517",
-      "award": "",
-      "link": "https://arxiv.org/abs/1901.07517",
-      "hidden": false
     },
     {
       "year": 2018,
