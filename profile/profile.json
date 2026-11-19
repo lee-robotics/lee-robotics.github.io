@@ -77,8 +77,15 @@
         "href": "https://leggedrobotics.github.io/rl-blindloco/"
       },
       {
+        "cols": 2,
+        "rows": 1,
+        "caption": "Vision-language reasoning meets learned local navigation in the wild",
+        "sub": "Science Robotics 2026",
+        "href": "https://doi.org/10.1126/scirobotics.aee1549"
+      },
+      {
         "src": "media/profile/anymal-field-monkeys.jpg",
-        "cols": 3,
+        "cols": 2,
         "rows": 1,
         "caption": "When monkeys meet an ANYmal robot in the wild",
         "sub": "In South Africa, bioRxiv 2024",
@@ -95,7 +102,7 @@
       },
       {
         "src": "media/profile/anymal-forest-hike.jpg",
-        "cols": 2,
+        "cols": 1,
         "rows": 1,
         "caption": "Hiking with ANYmal",
         "sub": "Science Robotics 2022",
